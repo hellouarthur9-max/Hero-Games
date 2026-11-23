@@ -58,18 +58,11 @@ search.addEventListener("input", () => {
   const term = search.value.trim().toLocaleLowerCase("pt-BR");
   renderGames(games.filter(game => `${game.name} ${game.category} ${game.description}`.toLocaleLowerCase("pt-BR").includes(term)));
 });
-fetch("games.json?v=" + Date.now(), {
-  cache: "no-store"
-})
-.then(response => {
-  if (!response.ok) {
-    throw new Error("Erro ao carregar games.json");
-  }
-  return response.json();
-})
-.then(games => {
-  // Mantenha aqui o código que exibe os jogos
-})
-.catch(error => {
-  console.error("Erro:", error);
-});
+fetch("./games.json")
+  .then(response => { if (!response.ok) throw new Error("games.json não encontrado"); return response.json(); })
+  .then(data => {
+    if (!Array.isArray(data)) throw new Error("Formato inválido");
+    games = data;
+    renderGames(games);
+  })
+  .catch(() => { error.hidden = false; });
