@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17171c">
+  <title>Hero Games</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Hero Games"><span>Hero</span> Games</a>
+    <nav>
+      <button class="nav-link active" data-page="inicio">Início</button>
+      <button class="nav-link" data-page="biblioteca">Biblioteca</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="page active">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">SUA CENTRAL DE JOGOS</p>
+          <h1>Seu próximo jogo<br><span>começa aqui.</span></h1>
+          <p class="hero-description">Encontre jogos para abrir e jogar direto no navegador.</p>
+          <button class="primary-button" id="explore-button">Explorar biblioteca <span>→</span></button>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orb orb-one"></div><div class="orb orb-two"></div>
+          <div class="art-card"><span class="art-symbol">H</span><span class="art-caption">HERO GAMES</span></div>
+        </div>
+      </div>
+      <footer class="home-footer">HERO GAMES <span>•</span> SUA BIBLIOTECA DE JOGOS</footer>
+    </section>
+
+    <section id="biblioteca" class="page">
+      <div class="library-heading">
+        <div><p class="eyebrow">CATÁLOGO</p><h1>Biblioteca</h1><p class="muted">Escolha um jogo e comece a jogar.</p></div>
+        <div class="game-count" id="game-count">0 jogos</div>
+      </div>
+      <label class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="Pesquisar jogos..." autocomplete="off"></label>
+      <div id="game-list" class="game-list"></div>
+      <p id="empty-state" class="empty-state" hidden>Nenhum jogo encontrado.</p>
+      <p id="load-error" class="error-state" hidden>Não foi possível carregar o catálogo. Confira se o arquivo <b>games.json</b> está na mesma pasta do index.html.</p>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>

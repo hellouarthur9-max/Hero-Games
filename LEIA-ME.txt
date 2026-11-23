@@ -1,0 +1,13 @@
+HERO GAMES
+
+1. Extraia a pasta Hero-Games.
+2. Abra editor.html no Brave para adicionar, editar, excluir jogos e escolher capas.
+3. No editor, clique em Exportar games.json quando terminar.
+4. Para publicar/atualizar no GitHub Pages, envie index.html, style.css, script.js e games.json para a raiz do repositório (a mesma pasta).
+5. Abra o endereço do GitHub Pages e atualize com Ctrl+Shift+R.
+
+IMPORTANTE:
+- editor.html pode ser aberto diretamente no computador.
+- O site público usa games.json e precisa que esse arquivo esteja na mesma pasta de index.html.
+- Depois de exportar um catálogo novo, importe o games.json no editor na próxima sessão para continuar editando o catálogo atualizado.
+- As imagens escolhidas no editor são compactadas e incorporadas ao games.json.
