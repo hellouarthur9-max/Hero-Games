@@ -16,9 +16,10 @@ function renderGames(items) {
   list.innerHTML = "";
   count.textContent = `${items.length} ${items.length === 1 ? "jogo" : "jogos"}`;
   empty.hidden = items.length !== 0;
-  items.forEach(game => {
+  items.forEach((game, index) => {
     const card = document.createElement("article");
     card.className = "game-card";
+    card.style.setProperty("--card-delay", `${Math.min(index * 55, 440)}ms`);
     const cover = document.createElement("div");
     cover.className = "game-cover";
     if (game.image) {
